@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+</head>
+<body>
+<div class="mui-content">
+  <div class="mui-content-padded">
+  <div id="maincontent">
+
+  <h1>CSS3 多列</h1>
+
+
+  <div id="tpn">
+      <ul class="prenext">
+          <li class="pre">CSS3 动画</li>
+          <li class="next">CSS3 用户界面</li>
+      </ul>
+  </div>
+
+
+  <div>
+      <h2>CSS3 多列</h2>
+
+      <p>通过 CSS3，您能够创建多个列来对文本进行布局 - 就像报纸那样！</p>
+
+      <p>在本章中，您将学习如下多列属性：</p>
+
+      <ul>
+          <li>column-count</li>
+          <li>column-gap</li>
+          <li>column-rule</li>
+      </ul>
+  </div>
+
+
+  <div>
+      <h2>浏览器支持</h2>
+
+      <table class="browsersupport">
+          <tbody><tr>
+              <th>属性</th>
+              <th colspan="5">浏览器支持</th>
+          </tr>
+
+          <tr>
+              <td class="bsProperty">column-count</td>
+              <td class="bsIE"></td>
+              <td class="bsPreFirefox"></td>
+              <td class="bsPreChrome"></td>
+              <td class="bsPreSafari"></td>
+              <td class="bsOpera"></td>
+          </tr>
+
+          <tr>
+              <td class="bsProperty">column-gap</td>
+              <td class="bsIE"></td>
+              <td class="bsPreFirefox"></td>
+              <td class="bsPreChrome"></td>
+              <td class="bsPreSafari"></td>
+              <td class="bsOpera"></td>
+          </tr>
+
+          <tr>
+              <td class="bsProperty">column-rule</td>
+              <td class="bsIE"></td>
+              <td class="bsPreFirefox"></td>
+              <td class="bsPreChrome"></td>
+              <td class="bsPreSafari"></td>
+              <td class="bsOpera"></td>
+          </tr>
+          </tbody></table>
+
+      <p>Internet Explorer 10 和 Opera 支持多列属性。</p>
+
+      <p>Firefox 需要前缀 -moz-。</p>
+
+      <p>Chrome 和 Safari 需要前缀 -webkit-。</p>
+
+      <p class="note"><span>注释：</span>Internet Explorer 9 以及更早的版本不支持多列属性。</p>
+  </div>
+
+
+  <div>
+      <h2>CSS3 创建多列</h2>
+
+      <p>column-count 属性规定元素应该被分隔的列数：</p>
+
+      <h3>实例</h3>
+
+      <p>把 div 元素中的文本分隔为三列：</p>
+
+<pre>div
+{
+-moz-column-count:3; 	<span class="code_comment">/* Firefox */</span>
+-webkit-column-count:3; <span class="code_comment">/* Safari 和 Chrome */</span>
+<code>column-count:3;</code>
+}
+</pre>
+
+      <p class="tiy">亲自试一试</p>
+  </div>
+
+
+  <div>
+      <h2>CSS3 规定列之间的间隔</h2>
+
+      <p>column-gap 属性规定列之间的间隔：</p>
+
+      <h3>实例</h3>
+
+      <p>规定列之间 40 像素的间隔：</p>
+
+<pre>div
+{
+-moz-column-gap:40px;		<span class="code_comment">/* Firefox */</span>
+-webkit-column-gap:40px;	<span class="code_comment">/* Safari 和 Chrome */</span>
+<code>column-gap:40px;</code>
+}
+</pre>
+
+      <p class="tiy">亲自试一试</p>
+  </div>
+
+
+  <div>
+      <h2>CSS3 列规则</h2>
+
+      <p>column-rule 属性设置列之间的宽度、样式和颜色规则。</p>
+
+      <h3>实例</h3>
+
+      <p>规定列之间的宽度、样式和颜色规则：</p>
+
+<pre>div
+{
+-moz-column-rule:3px outset #ff0000;	<span class="code_comment">/* Firefox */</span>
+-webkit-column-rule:3px outset #ff0000;	<span class="code_comment">/* Safari and Chrome */</span>
+column-rule:3px outset #ff0000;
+}
+</pre>
+
+      <p class="tiy">亲自试一试</p>
+  </div>
+
+
+  <div>
+      <h2>新的多列属性</h2>
+
+      <p>下面的表格列出了所有的转换属性：</p>
+
+      <table class="dataintable">
+          <tbody><tr>
+              <th style="width:25%;">属性</th>
+              <th>描述</th>
+              <th style="width:5%;">CSS</th>
+          </tr>
+
+          <tr>
+              <td>column-count</td>
+              <td>规定元素应该被分隔的列数。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>column-fill</td>
+              <td>规定如何填充列。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>column-gap</td>
+              <td>规定列之间的间隔。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>column-rule</td>
+              <td>设置所有 column-rule-* 属性的简写属性。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>column-rule-color</td>
+              <td>规定列之间规则的颜色。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>column-rule-style</td>
+              <td>规定列之间规则的样式。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>column-rule-width</td>
+              <td>规定列之间规则的宽度。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>column-span</td>
+              <td>规定元素应该横跨的列数。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>column-width</td>
+              <td>规定列的宽度。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>columns</td>
+              <td>规定设置 column-width 和 column-count 的简写属性。</td>
+              <td>3</td>
+          </tr>
+          </tbody></table>
+  </div>
+
+
+  <div id="bpn">
+      <ul class="prenext">
+          <li class="pre">CSS3 动画</li>
+          <li class="next">CSS3 用户界面</li>
+      </ul>
+  </div>
+
+
+
+
+  </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+</head>
+<body>
+<div class="mui-content">
+  <div class="mui-content-padded">
+  <div id="maincontent">
+
+  <h1>CSS3 用户界面</h1>
+
+
+  <div id="tpn">
+      <ul class="prenext">
+          <li class="pre">CSS3 多列</li>
+          <li class="next">CSS3 教程</li>
+      </ul>
+  </div>
+
+
+  <div>
+      <h2>CSS3 用户界面</h2>
+
+      <p>在 CSS3 中，新的用户界面特性包括重设元素尺寸、盒尺寸以及轮廓等。</p>
+
+      <p>在本章中，您将学到以下用户界面属性：</p>
+
+      <ul>
+          <li>resize</li>
+          <li>box-sizing</li>
+          <li>outline-offset</li>
+      </ul>
+  </div>
+
+
+  <div>
+      <h2>浏览器支持</h2>
+
+      <table class="browsersupport">
+          <tbody><tr>
+              <th>属性</th>
+              <th colspan="5">浏览器支持</th>
+          </tr>
+
+          <tr>
+              <td class="bsProperty">resize</td>
+              <td class="bsNoIE"></td>
+              <td class="bsFirefox"></td>
+              <td class="bsChrome"></td>
+              <td class="bsSafari"></td>
+              <td class="bsNoOpera"></td>
+          </tr>
+
+          <tr>
+              <td class="bsProperty">box-sizing</td>
+              <td class="bsIE"></td>
+              <td class="bsPreFirefox"></td>
+              <td class="bsChrome"></td>
+              <td class="bsSafari"></td>
+              <td class="bsOpera"></td>
+          </tr>
+
+          <tr>
+              <td class="bsProperty">outline-offset</td>
+              <td class="bsNoIE"></td>
+              <td class="bsFirefox"></td>
+              <td class="bsChrome"></td>
+              <td class="bsSafari"></td>
+              <td class="bsOpera"></td>
+          </tr>
+          </tbody></table>
+
+      <p>Firefox、Chrome 以及 Safari 支持 resize 属性。</p>
+
+      <p>Internet Explorer、Chrome、Safari 以及 Opera 支持 box-sizing 属性。Firefox 需要前缀 -moz-。</p>
+
+      <p>所有主流浏览器都支持 outline-offset 属性，除了 Internet Explorer。</p>
+  </div>
+
+
+  <div>
+      <h2>CSS3 Resizing</h2>
+
+      <p>在 CSS3，resize 属性规定是否可由用户调整元素尺寸。</p>
+
+      <p id="resize">这个 div 元素可由用户调整尺寸（在 Firefox 4+、Chrome 以及 Safari 中）。</p>
+
+      <p>CSS 代码如下：</p>
+
+      <h3>实例</h3>
+
+      <p>规定 div 元素可由用户调整大小：</p>
+
+<pre>div
+{
+resize:both;
+overflow:auto;
+}
+</pre>
+
+      <p class="tiy">亲自试一试</p>
+  </div>
+
+
+  <div>
+      <h2>CSS3 Box Sizing</h2>
+
+      <p>box-sizing 属性允许您以确切的方式定义适应某个区域的具体内容。</p>
+
+      <h3>实例</h3>
+
+      <p>规定两个并排的带边框方框：</p>
+
+<pre>div
+{
+box-sizing:border-box;
+-moz-box-sizing:border-box;	/* Firefox */
+-webkit-box-sizing:border-box;	/* Safari */
+width:50%;
+float:left;
+}
+</pre>
+
+      <p class="tiy">亲自试一试</p>
+  </div>
+
+
+  <div>
+      <h2>CSS3 Outline Offset</h2>
+
+      <p>outline-offset 属性对轮廓进行偏移，并在超出边框边缘的位置绘制轮廓。</p>
+
+      <p>轮廓与边框有两点不同：</p>
+
+      <ul>
+          <li>轮廓不占用空间</li>
+          <li>轮廓可能是非矩形</li>
+      </ul>
+
+      <p id="outlineoffset">这个 div 在边框之外 15 像素处有一个轮廓。</p>
+
+      <p>CSS 代码如下：</p>
+
+      <h3>实例</h3>
+
+      <p>规定边框边缘之外 15 像素处的轮廓：</p>
+
+<pre>div
+{
+border:2px solid black;
+outline:2px solid red;
+outline-offset:15px;
+}
+</pre>
+
+      <p class="tiy">亲自试一试</p>
+  </div>
+
+
+  <div>
+      <h2>新的用户界面属性</h2>
+
+      <p>下面的表格列出了所有的转换属性：</p>
+
+      <table class="dataintable">
+          <tbody><tr>
+              <th style="width:25%;">属性</th>
+              <th>描述</th>
+              <th style="width:5%;">CSS</th>
+          </tr>
+
+          <tr>
+              <td>appearance</td>
+              <td>允许您将元素设置为标准用户界面元素的外观</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>box-sizing</td>
+              <td>允许您以确切的方式定义适应某个区域的具体内容。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>icon</td>
+              <td>为创作者提供使用图标化等价物来设置元素样式的能力。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>nav-down</td>
+              <td>规定在使用 arrow-down 导航键时向何处导航。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>nav-index</td>
+              <td>设置元素的 tab 键控制次序。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>nav-left</td>
+              <td>规定在使用 arrow-left 导航键时向何处导航。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>nav-right</td>
+              <td>规定在使用 arrow-right 导航键时向何处导航。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>nav-up</td>
+              <td>规定在使用 arrow-up 导航键时向何处导航。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>outline-offset</td>
+              <td>对轮廓进行偏移，并在超出边框边缘的位置绘制轮廓。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>resize</td>
+              <td>规定是否可由用户对元素的尺寸进行调整。</td>
+              <td>3</td>
+          </tr>
+          </tbody></table>
+  </div>
+
+
+  <div id="bpn">
+      <ul class="prenext">
+          <li class="pre">CSS3 多列</li>
+          <li class="next">CSS3 教程</li>
+      </ul>
+  </div>
+
+
+
+
+  </div>
+  </div>
+</div>
+</body>
+</html>

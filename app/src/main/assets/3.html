@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+</head>
+<body>
+<div class="mui-content">
+  <div class="mui-content-padded">
+      <div id="maincontent">
+
+          <h1>CSS3 背景</h1>
+
+
+          <div id="tpn">
+              <ul class="prenext">
+                  <li class="pre">CSS3 边框</li>
+                  <li class="next">CSS3 文本效果</li>
+              </ul>
+          </div>
+
+
+          <div style="background:url('/i/bg_flower.gif') no-repeat bottom right;background-origin: content-box;">
+              <h2>CSS3 背景</h2>
+
+              <p>CSS3 包含多个新的背景属性，它们提供了对背景更强大的控制。</p>
+
+              <p>在本章，您将学到以下背景属性：</p>
+
+              <ul>
+                  <li>background-size</li>
+                  <li>background-origin</li>
+              </ul>
+
+              <p>您也将学到如何使用多重背景图片。</p>
+          </div>
+
+
+          <div>
+              <h2>浏览器支持</h2>
+
+              <table class="dataintable browsersupport">
+                  <tbody><tr>
+                      <th>属性</th>
+                      <th colspan="5">浏览器支持</th>
+                  </tr>
+                  <tr>
+                      <td class="bsProperty">background-size</td>
+                      <td class="bsIE"></td>
+                      <td class="bsFirefox"></td>
+                      <td class="bsChrome"></td>
+                      <td class="bsSafari"></td>
+                      <td class="bsOpera"></td>
+                  </tr>
+                  <tr>
+                      <td class="bsProperty">background-origin</td>
+                      <td class="bsIE"></td>
+                      <td class="bsFirefox"></td>
+                      <td class="bsChrome"></td>
+                      <td class="bsSafari"></td>
+                      <td class="bsOpera"></td>
+                  </tr>
+                  </tbody></table>
+
+              <p>Internet Explorer 9+、Firefox、Chrome、Safari 以及 Opera 支持新的背景属性。</p>
+          </div>
+
+
+          <div style="background:url('/i/bg_flower_small.gif') no-repeat top left;background-origin: content-box;">
+              <h2>CSS3 background-size 属性</h2>
+
+              <p style="margin-top:120px;">background-size 属性规定背景图片的尺寸。</p>
+
+              <p>在 CSS3 之前，背景图片的尺寸是由图片的实际尺寸决定的。在 CSS3 中，可以规定背景图片的尺寸，这就允许我们在不同的环境中重复使用背景图片。</p>
+
+              <p>您能够以像素或百分比规定尺寸。如果以百分比规定尺寸，那么尺寸相对于父元素的宽度和高度。</p>
+
+              <h3>例子 1</h3>
+
+              <p>调整背景图片的大小：</p>
+
+<pre>div
+{
+background:url(bg_flower.gif);
+-moz-background-size:63px 100px; <span class="code_comment">/* 老版本的 Firefox */</span>
+background-size:63px 100px;
+background-repeat:no-repeat;
+}
+</pre>
+
+              <p class="tiy">亲自试一试</p>
+
+              <h3>例子 2</h3>
+
+              <p>对背景图片进行拉伸，使其完成填充内容区域：</p>
+
+<pre>div
+{
+background:url(bg_flower.gif);
+-moz-background-size:40% 100%; <span class="code_comment">/* 老版本的 Firefox */</span>
+background-size:40% 100%;
+background-repeat:no-repeat;
+}
+</pre>
+
+              <p class="tiy">亲自试一试</p>
+          </div>
+
+
+          <div>
+              <h2>CSS3 background-origin 属性</h2>
+
+              <p>background-origin 属性规定背景图片的定位区域。</p>
+
+              <p>背景图片可以放置于 content-box、padding-box 或 border-box 区域。</p>
+
+              <img src="./i/background-origin.gif" alt="背景图片的定位区域">
+
+              <h3>实例</h3>
+
+              <p>在 content-box 中定位背景图片：</p>
+
+<pre>div
+{
+background:url(bg_flower.gif);
+background-repeat:no-repeat;
+background-size:100% 100%;
+-webkit-background-origin:content-box; <span class="code_comment">/* Safari */</span>
+background-origin:content-box;
+}
+</pre>
+
+              <p class="tiy">亲自试一试</p>
+          </div>
+
+
+          <div style="background:url('/i/bg_flower_multi.gif') no-repeat top left;background-origin: content-box;">
+              <h2>CSS3 多重背景图片</h2>
+
+              <p style="margin-top:180px;">CSS3 允许您为元素使用多个背景图像。</p>
+
+              <h3>实例</h3>
+
+              <p>为 body 元素设置两幅背景图片：</p>
+
+<pre>body
+{
+background-image:url(bg_flower.gif),url(bg_flower_2.gif);
+}
+</pre>
+
+              <p class="tiy">亲自试一试</p>
+          </div>
+
+
+          <div>
+              <h2>新的背景属性</h2>
+
+              <table class="dataintable">
+                  <tbody><tr>
+                      <th style="width:25%;">属性</th>
+                      <th style="width:70%;">描述</th>
+                      <th>CSS</th>
+                  </tr>
+
+                  <tr>
+                      <td>background-clip</td>
+                      <td>规定背景的绘制区域。</td>
+                      <td>3</td>
+                  </tr>
+
+                  <tr>
+                      <td>background-origin</td>
+                      <td>规定背景图片的定位区域。</td>
+                      <td>3</td>
+                  </tr>
+
+                  <tr>
+                      <td>background-size</td>
+                      <td>规定背景图片的尺寸。</td>
+                      <td>3</td>
+                  </tr>
+                  </tbody></table>
+          </div>
+
+
+          <div id="bpn">
+              <ul class="prenext">
+                  <li class="pre">CSS3 边框</li>
+                  <li class="next">CSS3 文本效果</li>
+              </ul>
+          </div>
+
+
+
+
+      </div>
+  </div>
+</div>
+</body>
+</html>

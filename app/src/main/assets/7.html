@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+</head>
+<body>
+<div class="mui-content">
+  <div class="mui-content-padded">
+  <div id="maincontent">
+
+  <h1>CSS3 3D 转换</h1>
+
+
+  <div id="tpn">
+      <ul class="prenext">
+          <li class="pre">CSS3 2D 转换</li>
+          <li class="next">CSS3 过渡</li>
+      </ul>
+  </div>
+
+
+  <div style="height:220px;">
+      <h2>3D 转换</h2>
+
+      <p>CSS3 允许您使用 3D 转换来对元素进行格式化。</p>
+
+      <p>在本章中，您将学到其中的一些 3D 转换方法：</p>
+
+      <ul>
+          <li>rotateX()</li>
+          <li>rotateY()</li>
+      </ul>
+
+      <p>点击下面的元素，来查看 2D 转换与 3D 转换之间的不同之处：</p>
+
+      <p onclick="rotateDIV()" id="rotate1" class="animated_div">2D 旋转</p>
+      <p onclick="rotateYDIV()" id="rotatey1" class="animated_div">3D 旋转</p>
+  </div>
+
+
+  <div>
+      <h2>它如何工作？</h2>
+
+      <p>转换是使元素改变形状、尺寸和位置的一种效果。</p>
+
+      <p>您可以使用 2D 或 3D 转换来转换您的元素。</p>
+  </div>
+
+
+  <div>
+      <h2>浏览器支持</h2>
+
+      <table class="browsersupport">
+          <tbody><tr>
+              <th>属性</th>
+              <th colspan="5">浏览器支持</th>
+          </tr>
+
+          <tr>
+              <td class="bsProperty">transform</td>
+              <td class="bsIE"></td>
+              <td class="bsFirefox"></td>
+              <td class="bsPreChrome"></td>
+              <td class="bsPreSafari"></td>
+              <td class="bsNoOpera"></td>
+          </tr>
+          </tbody></table>
+
+      <p>Internet Explorer 10 和 Firefox 支持 3D 转换。</p>
+
+      <p>Chrome 和 Safari 需要前缀 -webkit-。</p>
+
+      <p>Opera 仍然不支持 3D 转换（它只支持 2D 转换）。</p>
+  </div>
+
+
+  <div>
+      <h2>rotateX() 方法</h2>
+
+      <p>通过 rotateX() 方法，元素围绕其 X 轴以给定的度数进行旋转。</p>
+
+      <h3>实例</h3>
+
+<pre>div
+{
+transform: rotateX(120deg);
+-webkit-transform: rotateX(120deg);	<span class="code_comment">/* Safari 和 Chrome */</span>
+-moz-transform: rotateX(120deg);	<span class="code_comment">/* Firefox */</span>
+}
+</pre>
+
+      <p class="tiy">亲自试一试</p>
+  </div>
+
+
+  <div>
+      <h2>rotateY() 旋转</h2>
+
+      <p>通过 rotateY() 方法，元素围绕其 Y 轴以给定的度数进行旋转。</p>
+
+      <h3>实例</h3>
+
+<pre>div
+{
+transform: rotateY(130deg);
+-webkit-transform: rotateY(130deg);	<span class="code_comment">/* Safari 和 Chrome */</span>
+-moz-transform: rotateY(130deg);	<span class="code_comment">/* Firefox */</span>
+}
+</pre>
+
+      <p class="tiy">亲自试一试</p>
+  </div>
+
+
+  <div>
+      <h2>转换属性</h2>
+
+      <p>下面的表格列出了所有的转换属性：</p>
+
+      <table class="dataintable">
+          <tbody><tr>
+              <th style="width:25%;">属性</th>
+              <th>描述</th>
+              <th style="width:5%;">CSS</th>
+          </tr>
+
+          <tr>
+              <td>transform</td>
+              <td>向元素应用 2D 或 3D 转换。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>transform-origin</td>
+              <td>允许你改变被转换元素的位置。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>transform-style</td>
+              <td>规定被嵌套元素如何在 3D 空间中显示。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>perspective</td>
+              <td>规定 3D 元素的透视效果。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>perspective-origin</td>
+              <td>规定 3D 元素的底部位置。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>backface-visibility</td>
+              <td>定义元素在不面对屏幕时是否可见。</td>
+              <td>3</td>
+          </tr>
+
+          </tbody></table>
+  </div>
+
+
+  <div>
+      <h2>2D Transform 方法</h2>
+
+      <table class="dataintable">
+          <tbody><tr>
+              <th style="width:25%;">函数</th>
+              <th>描述</th>
+          </tr>
+
+          <tr>
+              <td>matrix3d(<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<br><i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>)</td>
+              <td>定义 3D 转换，使用 16 个值的 4x4 矩阵。</td>
+          </tr>
+
+          <tr>
+              <td>translate3d(<i>x</i>,<i>y</i>,<i>z</i>)</td>
+              <td>定义 3D 转化。</td>
+          </tr>
+
+          <tr>
+              <td>translateX(<i>x</i>)</td>
+              <td>定义 3D 转化，仅使用用于 X 轴的值。</td>
+          </tr>
+
+          <tr>
+              <td>translateY(<i>y</i>)</td>
+              <td>定义 3D 转化，仅使用用于 Y 轴的值。</td>
+          </tr>
+
+          <tr>
+              <td>translateZ(<i>z</i>)</td>
+              <td>定义 3D 转化，仅使用用于 Z 轴的值。</td>
+          </tr>
+
+          <tr>
+              <td>scale3d(<i>x</i>,<i>y</i>,<i>z</i>)</td>
+              <td>定义 3D 缩放转换。</td>
+          </tr>
+
+          <tr>
+              <td>scaleX(<i>x</i>)</td>
+              <td>定义 3D 缩放转换，通过给定一个 X 轴的值。</td>
+          </tr>
+
+          <tr>
+              <td>scaleY(<i>y</i>)</td>
+              <td>定义 3D 缩放转换，通过给定一个 Y 轴的值。</td>
+          </tr>
+
+          <tr>
+              <td>scaleZ(<i>z</i>)</td>
+              <td>定义 3D 缩放转换，通过给定一个 Z 轴的值。</td>
+          </tr>
+
+          <tr>
+              <td>rotate3d(<i>x</i>,<i>y</i>,<i>z</i>,<i>angle</i>)</td>
+              <td>定义 3D 旋转。</td>
+          </tr>
+
+          <tr>
+              <td>rotateX(<i>angle</i>)</td>
+              <td>定义沿 X 轴的 3D 旋转。</td>
+          </tr>
+
+          <tr>
+              <td>rotateY(<i>angle</i>)</td>
+              <td>定义沿 Y 轴的 3D 旋转。</td>
+          </tr>
+
+          <tr>
+              <td>rotateZ(<i>angle</i>)</td>
+              <td>定义沿 Z 轴的 3D 旋转。</td>
+          </tr>
+
+          <tr>
+              <td>perspective(<i>n</i>)</td>
+              <td>定义 3D 转换元素的透视视图。</td>
+          </tr>
+          </tbody></table>
+  </div>
+
+
+  <div id="bpn">
+      <ul class="prenext">
+          <li class="pre">CSS3 2D 转换</li>
+          <li class="next">CSS3 过渡</li>
+      </ul>
+  </div>
+
+
+
+
+  </div>
+  </div>
+</div>
+</body>
+</html>

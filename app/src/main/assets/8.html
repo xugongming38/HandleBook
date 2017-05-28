@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+</head>
+<body>
+<div class="mui-content">
+  <div class="mui-content-padded">
+  <div id="maincontent">
+
+  <h1>CSS3 过渡</h1>
+
+
+  <div id="tpn">
+      <ul class="prenext">
+          <li class="pre">CSS3 3D 转换</li>
+          <li class="next">CSS3 动画</li>
+      </ul>
+  </div>
+
+
+  <div style="height:160px;">
+      <h2>CSS3 过渡</h2>
+
+      <p>通过 CSS3，我们可以在不使用 Flash 动画或 JavaScript 的情况下，当元素从一种样式变换为另一种样式时为元素添加效果。</p>
+
+      <p>请把鼠标移动到下面的元素上：</p>
+
+      <p class="animated_div">CSS3 过渡</p>
+  </div>
+
+
+  <div>
+      <h2>浏览器支持</h2>
+
+      <table class="browsersupport">
+          <tbody><tr>
+              <th>属性</th>
+              <th colspan="5">浏览器支持</th>
+          </tr>
+
+          <tr>
+              <td class="bsProperty">transition</td>
+              <td class="bsIE"></td>
+              <td class="bsFirefox"></td>
+              <td class="bsChrome"></td>
+              <td class="bsPreSafari"></td>
+              <td class="bsOpera"></td>
+          </tr>
+          </tbody></table>
+
+      <p>Internet Explorer 10、Firefox、Chrome 以及 Opera 支持 transition 属性。</p>
+
+      <p>Safari 需要前缀 -webkit-。</p>
+
+      <p class="note"><span>注释：</span>Internet Explorer 9 以及更早的版本，不支持 transition 属性。</p>
+
+      <p class="note"><span>注释：</span>Chrome 25 以及更早的版本，需要前缀 -webkit-。</p>
+  </div>
+
+
+  <div>
+      <h2>它如何工作？</h2>
+
+      <p>CSS3 过渡是元素从一种样式逐渐改变为另一种的效果。</p>
+
+      <p>要实现这一点，必须规定两项内容：</p>
+
+      <ul>
+          <li>规定您希望把效果添加到哪个 CSS 属性上</li>
+          <li>规定效果的时长</li>
+      </ul>
+
+      <h3>实例</h3>
+
+      <p>应用于宽度属性的过渡效果，时长为 2 秒：</p>
+
+<pre>div
+{
+transition: width 2s;
+-moz-transition: width 2s;	<span class="code_comment">/* Firefox 4 */</span>
+-webkit-transition: width 2s;	<span class="code_comment">/* Safari 和 Chrome */</span>
+-o-transition: width 2s;	<span class="code_comment">/* Opera */</span>
+}
+</pre>
+
+      <p class="note"><span>注释：</span>如果时长未规定，则不会有过渡效果，因为默认值是 0。</p>
+
+      <p>效果开始于指定的 CSS 属性改变值时。CSS 属性改变的典型时间是鼠标指针位于元素上时：</p>
+
+      <h3>实例</h3>
+
+      <p>规定当鼠标指针悬浮于 &lt;div&gt; 元素上时：</p>
+
+<pre>div:hover
+{
+width:300px;
+}
+</pre>
+
+      <p class="tiy">亲自试一试</p>
+
+      <p class="note"><span>注释：</span>当指针移出元素时，它会逐渐变回原来的样式。</p>
+  </div>
+
+
+  <div>
+      <h2>多项改变</h2>
+
+      <p>如需向多个样式添加过渡效果，请添加多个属性，由逗号隔开：</p>
+
+      <h3>实例</h3>
+
+      <p>向宽度、高度和转换添加过渡效果：</p>
+
+<pre>div
+{
+transition: width 2s, height 2s, transform 2s;
+-moz-transition: width 2s, height 2s, -moz-transform 2s;
+-webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+-o-transition: width 2s, height 2s,-o-transform 2s;
+}
+</pre>
+
+      <p class="tiy">亲自试一试</p>
+  </div>
+
+
+  <div>
+      <h2>过渡属性</h2>
+
+      <p>下面的表格列出了所有的转换属性：</p>
+
+      <table class="dataintable">
+          <tbody><tr>
+              <th style="width:30%;">属性</th>
+              <th>描述</th>
+              <th style="width:5%;">CSS</th>
+          </tr>
+
+          <tr>
+              <td>transition</td>
+              <td>简写属性，用于在一个属性中设置四个过渡属性。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>transition-property</td>
+              <td>规定应用过渡的 CSS 属性的名称。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>transition-duration</td>
+              <td>定义过渡效果花费的时间。默认是 0。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>transition-timing-function</td>
+              <td>规定过渡效果的时间曲线。默认是 "ease"。</td>
+              <td>3</td>
+          </tr>
+
+          <tr>
+              <td>transition-delay</td>
+              <td>规定过渡效果何时开始。默认是 0。</td>
+              <td>3</td>
+          </tr>
+          </tbody></table>
+
+      <p>下面的两个例子设置所有过渡属性：</p>
+
+      <h3>实例</h3>
+
+      <p>在一个例子中使用所有过渡属性：</p>
+
+<pre>div
+{
+transition-property: width;
+transition-duration: 1s;
+transition-timing-function: linear;
+transition-delay: 2s;
+<span class="code_comment">/* Firefox 4 */</span>
+-moz-transition-property:width;
+-moz-transition-duration:1s;
+-moz-transition-timing-function:linear;
+-moz-transition-delay:2s;
+<span class="code_comment">/* Safari 和 Chrome */</span>
+-webkit-transition-property:width;
+-webkit-transition-duration:1s;
+-webkit-transition-timing-function:linear;
+-webkit-transition-delay:2s;
+<span class="code_comment">/* Opera */</span>
+-o-transition-property:width;
+-o-transition-duration:1s;
+-o-transition-timing-function:linear;
+-o-transition-delay:2s;
+}
+</pre>
+
+      <p class="tiy">亲自试一试</p>
+
+      <h3>实例</h3>
+
+      <p>与上面的例子相同的过渡效果，但是使用了简写的 transition 属性：</p>
+
+<pre>div
+{
+transition: width 1s linear 2s;
+<span class="code_comment">/* Firefox 4 */</span>
+-moz-transition:width 1s linear 2s;
+<span class="code_comment">/* Safari and Chrome */</span>
+-webkit-transition:width 1s linear 2s;
+<span class="code_comment">/* Opera */</span>
+-o-transition:width 1s linear 2s;
+}
+</pre>
+
+      <p class="tiy">亲自试一试</p>
+  </div>
+
+
+  <div id="bpn">
+      <ul class="prenext">
+          <li class="pre">CSS3 3D 转换</li>
+          <li class="next">CSS3 动画</li>
+      </ul>
+  </div>
+
+
+
+
+  </div>
+  </div>
+</div>
+</body>
+</html>
