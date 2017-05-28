@@ -5,7 +5,7 @@
 欢迎二次开发，欢迎star
 
 
-# 效果图（依次为：初始，点击选择，次点击后删除）
+# 效果图
  ![image](https://github.com/xugongming38/HandleBook/blob/master/ScreenShot/effect.jpg)
  
 # 这里就不详细了，具体可以查看我的博客
